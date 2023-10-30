@@ -1,27 +1,26 @@
-# React + TypeScript + Vite
+# Sistema de Gerenciamento de Biblioteca - Readme
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descrição
 
-Currently, two official plugins are available:
+O Sistema de Gerenciamento de Biblioteca é uma aplicação web desenvolvida em React que oferece funcionalidades para empréstimo e devolução de livros em uma biblioteca. O sistema é composto por três principais entidades: Usuário, Livro e Empréstimo.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Funcionalidades
 
-## Expanding the ESLint configuration
+### Cadastro de Usuário
+Pode-se registrar fornecendo seu nome, e-mail e número de telefone.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Cadastro de Livros
+Pode-se adicionar novos livros, inserindo título, autor, ano de publicação.
 
-- Configure the top-level `parserOptions` property like this:
+### Empréstimo de Livros
+Possibilita a solicitação de empréstimo de livros disponíveis. O sistema registra a data de empréstimo e define automaticamente uma data de devolução (por exemplo, 15 dias após o empréstimo).
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+### Devolução de Livros
+Usuários têm a opção de devolver livros antes ou na data de devolução. Quando um livro é devolvido, a disponibilidade é atualizada para 1 (disponível).
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Consulta de Livros
+Os usuários podem pesquisar livros por título, autor ou ano de publicação. Eles podem verificar se um livro está disponível para empréstimo ou já está emprestado.
+
+---
+
+**Nota:** Este projeto foi desenvolvido como parte de um desafio técnico e oferece funcionalidades básicas para o gerenciamento de uma biblioteca, utilizando a biblioteca React para o desenvolvimento da interface do usuário.
