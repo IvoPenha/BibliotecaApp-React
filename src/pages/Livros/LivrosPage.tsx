@@ -41,28 +41,31 @@ export const LivrosPage = () => {
           setLivros(livros.data);
           setIsLoading(false);
         })}
-      >
-        <Input
-          register={register}
-          name="titulo"
-          label="Titulo"
-        />
-        <Input
-          register={register}
-          name="autor"
-          label="Autor"
-        />
-        <Input
-          register={register}
-          name="ano"
-          label="Ano"
-        />
-        <button
-          className='btn btn-primary'
-          type="submit"
         >
-          Buscar
-        </button>
+          <h3>Filtros</h3>
+          <div>
+            <Input
+              register={register}
+              name="titulo"
+              label="Titulo"
+            />
+            <Input
+              register={register}
+              name="autor"
+              label="Autor"
+            />
+            <Input
+              register={register}
+              name="ano"
+              label="Ano"
+            />
+            <button
+              className='btn btn-primary'
+              type="submit"
+            >
+              Buscar
+            </button>
+        </div>
       </S.Filters>
       <LivrosLista
         data={livros}
